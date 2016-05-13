@@ -18,15 +18,15 @@ gulp.task('less', function() {
         "Safari >= 6"
       ]
     }))
-    .pipe(gulp.dest('css/main.css'));
+    .pipe(gulp.dest('css/'));
 });
 
 gulp.task('serve', function() {
   var server = lvserver.static('./', 8000);
   server.start();
 
-  gulp.watch('less/*.less', ['less']);
-  gulp.watch(['css/*.css', './index.html'], function(file) {
+  gulp.watch('./less/*.less', ['less']);
+  gulp.watch(['./css/*.css', './index.html'], function(file) {
     lvserver.notify.apply(server, [file]);
   });
 });

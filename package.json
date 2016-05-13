@@ -1,0 +1,24 @@
+{
+  "name": "urban-jr-dev-test",
+  "version": "1.0.0",
+  "description": "Test to complete to be considered for a position at Urban Outfitters",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mrkjesus2/UrbnDevTest.git"
+  },
+  "author": "Mark Weigel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrkjesus2/UrbnDevTest/issues"
+  },
+  "homepage": "https://github.com/mrkjesus2/UrbnDevTest#readme",
+  "devDependencies": {
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-less": "^3.1.0",
+    "gulp-live-server": "0.0.29"
+  }
+}

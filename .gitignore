@@ -1,4 +1,5 @@
 node_modules/
+bower_components/
 mockup-desktop.jpg
 mockup-mobile.jpg
 mockup-tablet.jpg

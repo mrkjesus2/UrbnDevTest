@@ -3,7 +3,26 @@
 // Import the relevant Bootstrap less files TODO: Strip down bootstrap
 @import "../bower_components/bootstrap/less/bootstrap.less";
 
+/*************/
+/* Variables */
+/*************/
+@text-color: #aaa;
+
+
+/* Typography */
+a {
+  color: @text-color;
+  // Create an underline for the link that allows for more separation than 'text-decoration'
+  span {
+    display: inline-block;
+    border-bottom: 1px solid darken(@text-color, 10%);
+    padding-bottom: .1em;
+  }
+}
+
+/**********/
 /* Layout */
+/**********/
 main {
   &:extend(.container-fluid);
   // Prevent the images from becoming too far apart on tablets
@@ -31,6 +50,16 @@ main {
 
   a {
     display: block;
+  }
+}
+
+/*****************/
+/* Media Queries */
+/*****************/
+// Scale the font-size on very narrow devices
+@media screen and (max-width: 200px) {
+  a {
+    font-size: 6vw;
   }
 }
 

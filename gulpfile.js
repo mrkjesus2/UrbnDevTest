@@ -4,7 +4,7 @@ var prefix = require('gulp-autoprefixer');
 var lvserver = require('gulp-live-server');
 
 gulp.task('less', function() {
-  gulp.src('less/*.less')
+  gulp.src('./src/less/*.less')
     .pipe(less())
     .pipe(prefix({
       browsers: [
@@ -18,15 +18,15 @@ gulp.task('less', function() {
         "Safari >= 6"
       ]
     }))
-    .pipe(gulp.dest('css/'));
+    .pipe(gulp.dest('./src/css/'));
 });
 
 gulp.task('serve', function() {
-  var server = lvserver.static('./', 8000);
+  var server = lvserver.static('./src/', 8000);
   server.start();
 
-  gulp.watch('./less/*.less', ['less']);
-  gulp.watch(['./css/*.css', './index.html'], function(file) {
+  gulp.watch('./src/less/*.less', ['less']);
+  gulp.watch(['./src/css/*.css', './src/index.html'], function(file) {
     lvserver.notify.apply(server, [file]);
   });
 });

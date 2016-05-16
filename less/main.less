@@ -1,3 +1,5 @@
+/* This is the file where all of the custom  styles for the project should live */
+
 // Import the relevant Bootstrap less files TODO: Strip down bootstrap
 @import "../bower_components/bootstrap/less/bootstrap.less";
 
@@ -14,12 +16,13 @@ main {
 }
 
 [role="item"] {
+  // Set the column widths for different screen sizes
   .make-sm-column(6);
   .make-md-column(4);
 
   img {
-    // &:extend(.img, .img-responsive);
     margin: 1.5em 0 .5em;
+    max-width: 100%;
 
     &:hover {
       opacity: 0.6;
@@ -31,7 +34,7 @@ main {
   }
 }
 
-// Hide the 'shop' links that appear only in the mobile mockup
+// 'Shop' links appear only in mobile mockup - This removes them for larger screen sizes.
 @media screen and (min-width: 768px) {
   [role="item"] {
     a {

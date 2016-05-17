@@ -6497,8 +6497,8 @@ button.close {
 .modal-header:after,
 .modal-footer:before,
 .modal-footer:after,
-main [role="items"]:before,
-main [role="items"]:after,
+main .items:before,
+main .items:after,
 main:before,
 main:after {
   content: " ";
@@ -6520,7 +6520,7 @@ main:after {
 .panel-body:after,
 .modal-header:after,
 .modal-footer:after,
-main [role="items"]:after,
+main .items:after,
 main:after {
   clear: both;
 }
@@ -6770,7 +6770,9 @@ main:after {
 /*************/
 /* Variables */
 /*************/
+/**************/
 /* Typography */
+/**************/
 a {
   color: #aaa;
 }
@@ -6785,37 +6787,37 @@ a span {
 main {
   max-width: 700px;
 }
-main [role="items"] {
+main .items {
   margin-left: -15px;
   margin-right: -15px;
   text-align: center;
 }
-[role="item"] {
+.item {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
 }
 @media (min-width: 768px) {
-  [role="item"] {
+  .item {
     float: left;
     width: 50%;
   }
 }
 @media (min-width: 992px) {
-  [role="item"] {
+  .item {
     float: left;
     width: 33.33333333%;
   }
 }
-[role="item"] img {
+.item img {
   margin: 1.5em 0 .5em;
   max-width: 100%;
 }
-[role="item"] img:hover {
+.item img:hover {
   opacity: 0.6;
 }
-[role="item"] a {
+.item a {
   display: block;
 }
 /*****************/
@@ -6827,7 +6829,7 @@ main [role="items"] {
   }
 }
 @media screen and (min-width: 768px) {
-  [role="item"] a {
+  .item a {
     display: none;
   }
 }

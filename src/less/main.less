@@ -3,13 +3,16 @@
 // Import the relevant Bootstrap less files TODO: Strip down bootstrap
 @import "../../bower_components/bootstrap/less/bootstrap.less";
 
+
 /*************/
 /* Variables */
 /*************/
 @text-color: #aaa;
 
 
+/**************/
 /* Typography */
+/**************/
 a {
   color: @text-color;
   // Create an underline for the link that allows for more separation than 'text-decoration'
@@ -20,6 +23,7 @@ a {
   }
 }
 
+
 /**********/
 /* Layout */
 /**********/
@@ -28,13 +32,13 @@ main {
   // Prevent the images from becoming too far apart on tablets
   max-width: 700px;
 
-  [role="items"] {
+  .items {
     .make-row();
     .text-center();
   }
 }
 
-[role="item"] {
+.item {
   // Set the column widths for different screen sizes
   .make-sm-column(6);
   .make-md-column(4);
@@ -53,6 +57,7 @@ main {
   }
 }
 
+
 /*****************/
 /* Media Queries */
 /*****************/
@@ -65,7 +70,7 @@ main {
 
 // 'Shop' links appear only in mobile mockup - This removes them for larger screen sizes.
 @media screen and (min-width: 768px) {
-  [role="item"] {
+  .item {
     a {
       display: none;
     }

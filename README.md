@@ -15,3 +15,4 @@ to get the bootstrap source files.
 
 - If you have bower installed this is as easy as `bower install bootstrap` in the project directory
 - Otherwise you will have to run `npm -g install bower` beforehand
+- The changes are automatically compiled if you used the `gulp serve` command
